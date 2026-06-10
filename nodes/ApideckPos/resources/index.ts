@@ -1,0 +1,9 @@
+export { ordersDescription } from './orders';
+export { paymentsDescription } from './payments';
+export { merchantsDescription } from './merchants';
+export { locationsDescription } from './locations';
+export { itemsDescription } from './items';
+export { modifiersDescription } from './modifiers';
+export { modifierGroupsDescription } from './modifier-groups';
+export { orderTypesDescription } from './order-types';
+export { tendersDescription } from './tenders';
