@@ -10,32 +10,32 @@ import { orderTypesDescription } from './resources/order-types';
 import { tendersDescription } from './resources/tenders';
 
 export class ApideckPos implements INodeType {
-	description: INodeTypeDescription = {
-		displayName: 'Apideck Pos',
-		name: 'N8nDevApideckPos',
-		icon: { light: 'file:./apideck-pos.png', dark: 'file:./apideck-pos.dark.png' },
-		group: ['input'],
-		version: 1,
-		subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
-		description: 'POS API documentation.',
-		defaults: { name: 'Apideck Pos' },
-		usableAsTool: true,
-		inputs: [NodeConnectionTypes.Main],
-		outputs: [NodeConnectionTypes.Main],
-		credentials: [
-			{
-				name: 'N8nDevApideckPosApi',
-				required: true,
-			},
-		],
-		requestDefaults: {
-			baseURL: '={{\$credentials.url}}',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-		},
-		properties: [
+        description: INodeTypeDescription = {
+                displayName: 'Apideck Pos',
+                name: 'N8nDevApideckPos',
+                icon: { light: 'file:./apideck-pos.png', dark: 'file:./apideck-pos.dark.png' },
+                group: ['input'],
+                version: 1,
+                subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
+                description: 'POS API documentation.',
+                defaults: { name: 'Apideck Pos' },
+                usableAsTool: true,
+                inputs: [NodeConnectionTypes.Main],
+                outputs: [NodeConnectionTypes.Main],
+                credentials: [
+                        {
+                                name: 'N8nDevApideckPosApi',
+                                required: true,
+                        },
+                ],
+                requestDefaults: {
+                        baseURL: '={{\$credentials.url}}',
+                        headers: {
+                                Accept: 'application/json',
+                                'Content-Type': 'application/json',
+                        },
+                },
+                properties: [
 		{
 			"displayName": "Resource",
 			"name": "resource",
@@ -99,6 +99,6 @@ export class ApideckPos implements INodeType {
 		...modifierGroupsDescription,
 		...orderTypesDescription,
 		...tendersDescription
-		],
-	};
+                ],
+        };
 }
